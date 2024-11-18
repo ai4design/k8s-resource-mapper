@@ -4,7 +4,7 @@ A Go-based tool for visualizing and mapping relationships between Kubernetes res
 
 ## 🙏 Special Thanks
 
-Special thanks to **Leandro "Big Dog" Silva** for enabling this project with guidance and expertise. Your contributions to making Kubernetes resource visualization more accessible are greatly appreciated! 🐕
+Special thanks to **Leandro "Big Dog" Silva** (@leandrosilva) for enabling this project with guidance and expertise. Your contributions to making Kubernetes resource visualization more accessible are greatly appreciated! 🐕
 
 ## 📋 Features
 
@@ -136,4 +136,62 @@ docker run -v ~/.kube/config:/root/.kube/config k8s-resource-mapper
 The tool uses your current kubeconfig context. You can specify a different kubeconfig file using the KUBECONFIG environment variable:
 
 ```bash
-export KUBE
+export KUBECONFIG=/path/to/your/kubeconfig
+```
+
+## 🐛 Troubleshooting
+
+Common issues and solutions:
+
+1. **Kubeconfig not found**
+   ```bash
+   export KUBECONFIG=~/.kube/config
+   ```
+
+2. **Permission Issues**
+   ```bash
+   # Verify cluster access
+   kubectl auth can-i get pods --all-namespaces
+   ```
+
+3. **Build Errors**
+   ```bash
+   go mod tidy
+   go mod verify
+   ```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch
+   ```bash
+   git checkout -b feature/amazing-feature
+   ```
+3. Commit your changes
+   ```bash
+   git commit -m 'Add amazing feature'
+   ```
+4. Push to the branch
+   ```bash
+   git push origin feature/amazing-feature
+   ```
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🌟 Acknowledgments
+
+- Leandro "Big Dog" Silva for the inspiration and guidance
+- Kubernetes client-go library documentation
+- The Go community for excellent tooling
+
+## 📞 Support
+
+- Create an issue for bug reports
+- Start a discussion for feature requests
+- Check existing issues for known problems
+
+---
+Made with ❤️ by the Kubernetes community
