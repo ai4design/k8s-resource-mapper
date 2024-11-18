@@ -37,8 +37,8 @@ Special thanks to **Leandro "Big Dog" Silva** (@leandrosilva) for enabling this 
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/k8s-resource-mapper.git
-cd k8s-resource-mapper
+git clone https://github.com/ai4design/k8s-resource-mapper.git
+cd src
 ```
 
 2. Install dependencies:
